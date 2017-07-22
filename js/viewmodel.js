@@ -19,7 +19,6 @@ function ViewModel() {
     //this.infowindow.contentStr = "";
     //this.infowindow.InfoWindowOptions = 300;
 
-
     this.defaultIcon = makeMarkerIcon('3cd1fa');
 
     // Location constructor

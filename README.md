@@ -1,4 +1,3 @@
-
 # Campers Map: Udacity Neighborhood project
 
 This is a website project for udacity front-end web developer nanodegree program.
@@ -15,7 +14,7 @@ Locations are hardcoded.
 - Foursquare (for location photos)
 
 ## Tools
-- Normalize.css(https://necolas.github.io/normalize.css/)
+- [Normalize.css](https://necolas.github.io/normalize.css/)
 - Knockout.js
 - Jquery
 - Google Fonts
