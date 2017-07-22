@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Neighborhood Map Project">
+        <meta name="author" content="Ziya Gökhan Apaydın">
+        <title>Southwest Camps: Udacity Neighborhood Map Project</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700&amp;subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <!-- Header -->
+            <header class="header">
+                <h1 id="header_name">Southwest Camps</h1>
+                <a id="menu" class="header__menu" data-bind="click: changeStatus">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+                    </svg>
+                </a>
+            </header>
+
+            <!-- Sidebar -->
+            <div class="sidebar" data-bind="style: { display: menuActive() ? 'block' : 'none' }">
+                <!-- show & hide camps -->
+                <input class="btn" id="showcampbtn" data-bind="click: showCamps" type="button" value="Show All">
+                <input class="btn" id="hidecampbtn" data-bind="click: hideCamps" type="button" value="Hide All">
+
+                <!-- currentLocation coordinates -->
+                <div data-bind="with: currentLocation">
+                    <span data-bind="text: position.lat + ' - ' + position.lng"></span>
+                </div>
+
+                <!-- filterbox -->
+                <input data-bind="value: filter, valueUpdate: 'afterkeydown'"/>
+                <input class="btn" type="submit" data-bind="click: clearFilter" value="clear"/>
+
+                <!-- filteredLocationList -->
+                <ul data-bind="foreach: filteredLocationList()">
+                    <li class="list-item" data-bind="text: title, click: $parent.openInfoWindow"></li>
+                </ul>
+
+            </div>
+
+            <!-- Map -->
+            <div class="mapcontainer">
+                <div id="map"></div>
+            </div>
+
+        </div>
+
+        <!-- SCRIPTS-->
+        <script src="js/knockout-3.2.0.js"></script>
+        <script src="js/model.js"></script>
+        <script src="js/viewmodel.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeou3RQZgLnU2EM6rzAQHoOpnWH0FrK3Q&callback=initMap" onerror="initMapError()"></script>
+    </body>
+</html>

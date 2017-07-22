@@ -1,0 +1,151 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+}
+
+input {
+  font-family: Montserrat, sans-serif;
+  line-height: 2;
+    border-radius: 5px;
+    padding-left: 5px;
+    border: 1px solid grey;
+
+}
+
+input:focus {
+    background-color: #3cd1fa;
+    color: #fff;
+    outline: none;
+}
+
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.sidebar {
+    position: absolute;
+    left: 10px;
+    top: 80px;
+    width: 240px;
+    background-color: white;
+    opacity: 0.9;
+    border: 1px solid #999;
+    border-radius: 3px;
+    line-height: 3em;
+    padding: 10px 10px 30px 10px;
+    text-align: left;
+    z-index: 10;
+}
+
+.btn {
+  background-color: red;
+  font-size: 12px;
+  background-color: white;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  border: 2px solid #3cd1fa;
+}
+
+.btn:hover {
+  background-color: #3cd1fa;
+  color: white;
+}
+
+ul {
+  padding-left: 5px;
+}
+
+.list-item {
+  list-style: none;
+}
+
+.list-item:hover {
+  color: #3cd1fa;
+}
+
+.mapcontainer {
+/*    width: calc(100% - 260px);
+*/    width: 100%;
+    height: calc(100% - 70px);
+}
+
+.mapcontainer.full {
+    width: 100%;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+#showcampbtn,
+#hidecampbtn {
+    width: 48%;
+    }
+
+.header {
+  background-color: #3cd1fa;
+  width: 100%;
+  z-index: 10;
+  height: 70px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  transition: min-height 0.3s;
+}
+
+
+#header_name {
+  position: absolute;
+  color: #fff;
+  padding-left: 16px;
+}
+
+.header__menu {
+    display: block;
+    position: absolute;
+    right: 0;
+    padding: 1.2em;
+}
+.header__menu svg {
+    width: 32px;
+    fill: #fff;
+}
+
+.infoWindowsSizer {
+  height: 250px;
+  overflow: scroll;
+}
+
+
+.infowindow-title {
+  font-size: 1.5em;
+  padding: 4px 0 6px 0;
+  color: #3cd1fa;
+}
+
+@media screen and (max-width: 400px) {
+  #header_name {
+    font-size: 1.5em;
+    margin: 20px;
+    padding-left: 0;
+  }
+}
+
+
+
+
+
+/*
+@media screen and (min-width: 400px) {
+    .sidebar {
+        left: 0px;
+    }
+}*/
