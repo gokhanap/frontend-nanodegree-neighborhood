@@ -16,8 +16,6 @@ function ViewModel() {
 
     // infowindow for marker
     this.infowindow = new google.maps.InfoWindow();
-    //this.infowindow.contentStr = "";
-    //this.infowindow.InfoWindowOptions = 300;
 
     this.defaultIcon = makeMarkerIcon('3cd1fa');
 
@@ -111,18 +109,6 @@ function ViewModel() {
             });
         }
     });
-
-/*
-    // visibility changer experiment
-    this.isVisible = ko.observable(false);
-    this.changeVisibility = function() {
-        if (self.isVisible()) {
-            self.isVisible(false);
-        } else {
-            self.isVisible(true);
-        }
-    };
-*/
 
     // clear function for filter input box
     this.clearFilter = function() {

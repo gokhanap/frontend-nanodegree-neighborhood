@@ -12,7 +12,6 @@ input {
     border-radius: 5px;
     padding-left: 5px;
     border: 1px solid grey;
-
 }
 
 input:focus {
@@ -21,14 +20,12 @@ input:focus {
     outline: none;
 }
 
-
 .container {
     height: 100%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
-
 
 .sidebar {
     position: absolute;
@@ -73,8 +70,7 @@ ul {
 }
 
 .mapcontainer {
-/*    width: calc(100% - 260px);
-*/    width: 100%;
+    width: 100%;
     height: calc(100% - 70px);
 }
 
@@ -101,7 +97,6 @@ ul {
   transition: min-height 0.3s;
 }
 
-
 #header_name {
   position: absolute;
   color: #fff;
@@ -114,6 +109,7 @@ ul {
     right: 0;
     padding: 1.2em;
 }
+
 .header__menu svg {
     width: 32px;
     fill: #fff;
@@ -123,7 +119,6 @@ ul {
   height: 250px;
   overflow: scroll;
 }
-
 
 .infowindow-title {
   font-size: 1.5em;
@@ -138,14 +133,3 @@ ul {
     padding-left: 0;
   }
 }
-
-
-
-
-
-/*
-@media screen and (min-width: 400px) {
-    .sidebar {
-        left: 0px;
-    }
-}*/
